@@ -2,12 +2,18 @@
 
 import React, { useState } from "react";
 
-function Form()
+function submitForm()
 {
-	const [ person, setPerson ] = useState({
-		name: "",
-		job: ""
-	})
+	props.handleSubmit(person);
+	setPerson({ name: "", job: "" });
+}
+
+
+function Form(props)
+{
+	const [ person, setPerson ] = useState({ name: "", job: ""});
+
+	<input type="button" value="Submit" onClick={submitForm} />
 }
 
 function handleChange(event)
