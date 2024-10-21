@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-		"start": ""
+    "frontend": "cd packages/react-frontend/src && npm run dev",
+    "backend": "cd packages/express-backend && npx nodemon backend.js",
+    "start": "concurrently \"npm run backend\" \"npm run frontend\""
   },
   "author": "",
   "license": "ISC",
@@ -13,6 +15,11 @@
     "packages/*"
   ],
   "devDependencies": {
+    "concurrently": "^9.0.1",
     "nodemon": "^3.1.7"
+  },
+  "dependencies": {
+    "mongodb": "^6.10.0",
+    "mongoose": "^8.7.3"
   }
 }
