@@ -76,8 +76,8 @@ function MyApp() {
 	  
 		// 3. Get the ID of the character to delete (use the original list before filtering)
 		const characterToRemove = characters[index];
-		if (characterToRemove && characterToRemove.id) {
-		  deleteUser(characterToRemove.id); // Call deleteUser with the correct ID
+		if (characterToRemove && characterToRemove._id) {
+		  deleteUser(characterToRemove._id); // Call deleteUser with the correct ID
 		}
 		  
 	}
